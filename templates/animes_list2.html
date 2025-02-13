@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime List</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+
+    
+</head>
+<body>
+  <b><a class="icon-link" href="{% url 'website' %}">
+    <i class="bi bi-house-door"></i>  <!-- Bootstrap Home icon -->
+    Home
+</a>
+</b>
+
+<style>
+  .icon-link {
+    display: flex;
+    align-items: center;
+    font-size: 24px;  /* Increase the font size of both icon and text */
+  }
+
+  .icon-link i {
+    font-size: 1.5em;  /* Make the icon larger relative to the text */
+    margin-right: 10px;  /* Space between the icon and the text */
+  }
+</style>
+  
+    <header class="index-header">Index</header>
+    <nav class="alphabet-nav">
+      <a href="{% url 'anime_list' %}">A</a>
+      <a href="{% url 'anime_list_2' %}">B</a>
+      <a href="{% url 'anime_list_3' %}">C</a>
+       
+    </nav>
+    <section class="anime-list">
+        
+            <div class="anime-item"><a href="#">B-Project: Kodou*Ambitious BD</a></div>
+            <div class="anime-item"><a href="#">B-Project: Netsuretsu*Love Call</a></div>
+            <div class="anime-item"><a href="#">B-Project: Zecchou*Emotion</a></div>
+            <div class="anime-item"><a href="#">B: The Beginning BD</a></div>
+            <div class="anime-item"><a href="#">B: The Beginning Succession BD</a></div>
+            <div class="anime-item"><a href="#">Baby Steps</a></div>
+            <div class="anime-item"><a href="#">Baby Steps 2nd Season</a></div>
+            <div class="anime-item"><a href="#">Babylon</a></div>
+            <div class="anime-item"><a href="#">Baccano! BD</a></div>
+            <div class="anime-item"><a href="#">Baccano! Specials BD</a></div>
+            <div class="anime-item"><a href="#">Back Arrow BD</a></div>
+            <div class="anime-item"><a href="#">Back Street Girls: Gokudolls BD</a></div>
+            <div class="anime-item"><a href="#">Backflip!!</a></div>
+            <div class="anime-item"><a href="#">Baka to Test to Shoukanjuu BD</a></div>
+            <div class="anime-item"><a href="#">Baka to Test to Shoukanjuu Ni! BD</a></div>
+            <div class="anime-item"><a href="#">Baka to Test to Shoukanjuu: Matsuri BD</a></div>
+            <div class="anime-item"><a href="#">Bakemonogatari BD</a></div>
+            <div class="anime-item"><a href="#">Bakemonogatari Recap</a></div>
+            <div class="anime-item"><a href="#">Baki</a></div>
+            <div class="anime-item"><a href="#">Baki Hanma</a></div>
+            <div class="anime-item"><a href="#">Baki: Dai Raitaisai-hen</a></div>
+            <div class="anime-item"><a href="#">Baki: Most Evil Death Row Convicts Special Anime DVD</a></div>
+            <div class="anime-item"><a href="#">Bakuman. BD</a></div>
+            <div class="anime-item"><a href="#">Bakuman. 2nd Season BD</a></div>
+            <div class="anime-item"><a href="#">Bakuman. 3rd Season BD</a></div>
+            <div class="anime-item"><a href="#">Bakumatsu</a></div>
+            <div class="anime-item"><a href="#">Bakumatsu Crisis</a></div>
+            <div class="anime-item"><a href="#">Bakuon!! BD</a></div>
+            <div class="anime-item"><a href="#">Bakuon!! no Kobeya BD</a></div>
+            <div class="anime-item"><a href="#">Bakuon!! OVA DVD</a></div>
+            <div class="anime-item"><a href="#">Bakuretsu Tenshi BD</a></div>
+            <div class="anime-item"><a href="#">Bakuretsu Tenshi: Infinity BD</a></div>
+            <div class="anime-item"><a href="#">Bakusou Kyoudai Let's & Go DVD</a></div>
+            <div class="anime-item"><a href="#">Ballroom e Youkoso BD</a></div>
+            <div class="anime-item"><a href="#">Banana Fish BD</a></div>
+            <div class="anime-item"><a href="#">Bananya BD</a></div>
+            <div class="anime-item"><a href="#">Bananya and the Curious Bunch</a></div>
+            <div class="anime-item"><a href="#">Bananya: Around the World</a></div>
+            <div class="anime-item"><a href="#">BanG Dream! BD</a></div>
+            <div class="anime-item"><a href="#">BanG Dream! 2nd Season</a></div>
+            <div class="anime-item"><a href="#">BanG Dream! 3rd Season</a></div>
+            <div class="anime-item"><a href="#">BanG Dream! Film Live BD</a></div>
+            <div class="anime-item"><a href="#">BanG Dream! Film Live 2nd Stage</a></div>
+            <div class="anime-item"><a href="#">BanG Dream! Garupa☆Pico</a></div>
+            <div class="anime-item"><a href="#">BanG Dream! It's MyGO!!!!!</a></div>
+            <div class="anime-item"><a href="#">BanG Dream! Morfonication</a></div>
+            <div class="anime-item"><a href="#">BanG Dream! Movie: Episode of Roselia - I: Yakusoku</a></div>
+            <div class="anime-item"><a href="#">BanG Dream! Movie: Episode of Roselia - II: Song I Am.</a></div>
+            <div class="anime-item"><a href="#">BanG Dream! Movie: Poppin' Dream!</a></div>
+            <div class="anime-item"><a href="#">BanG Dream! We Had Some Fun! BD</a></div>
+            <div class="anime-item"><a href="#">Banished From The Hero's Party, I Decided To Live A Quiet Life In The Countryside BD</a></div>
+            <div class="anime-item"><a href="#">Banished From The Hero's Party, I Decided To Live A Quiet Life In The Countryside Season 2</a></div>
+            <div class="anime-item"><a href="#">Barakamon BD</a></div>
+            <div class="anime-item"><a href="#">Bartender</a></div>
+            <div class="anime-item"><a href="#">Bartender Glass of God</a></div>
+            <div class="anime-item"><a href="#">Basilisk: Kouga Ninpou Chou BD</a></div>
+            <div class="anime-item"><a href="#">Basilisk: Ouka Ninpouchou</a></div>
+            <div class="anime-item"><a href="#">Bastard!! DVD</a></div>
+            <div class="anime-item"><a href="#">Bastard‼ Heavy Metal, Dark Fantasy</a></div>
+            <div class="anime-item"><a href="#">Bastard‼ Heavy Metal, Dark Fantasy Part 2</a></div>
+            <div class="anime-item"><a href="#">Battery BD</a></div>
+            <div class="anime-item"><a href="#">Battle Athletes Victory ReSTART!</a></div>
+            <div class="anime-item"><a href="#">Battle Doll Angelic Layer</a></div>
+            <div class="anime-item"><a href="#">Battle Game in 5 Seconds</a></div>
+            <div class="anime-item"><a href="#">Battle Girl High School</a></div>
+            <div class="anime-item"><a href="#">Battle Girls: Time Paradox BD</a></div>
+            <div class="anime-item"><a href="#">Be Forever Yamato BD</a></div>
+            <div class="anime-item"><a href="#">Be My Wife</a></div>
+            <div class="anime-item"><a href="#">Beast Tamer BD</a></div>
+            <div class="anime-item"><a href="#">Beastars BD</a></div>
+            <div class="anime-item"><a href="#">Beastars 2nd Season BD</a></div>
+        
+            <br>
+            <br>
+        
+
+        <!-- Add more anime items here -->
+    </section>
+
+
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link" style="background-color: black; color: pink;">Previous</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="{% url 'anime_list' %}" style="background-color: black; color: pink;">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="{% url 'anime_list_2' %}" style="background-color: black; color: pink;">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="{% url 'anime_list_3' %}" style="background-color: black; color: pink;">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#" style="background-color: black; color: pink;">Next</a>
+        </li>
+      </ul>
+    </nav>
+   
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

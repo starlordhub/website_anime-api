@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ anime.title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://wallpapercave.com/wp/wp7057784.jpg'); /* Background image for the anime theme */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            text-align: center;
+            max-width: 800px;
+            margin: 50px auto;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for content */
+            padding: 30px;
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        img {
+            width: 80%;
+            max-width: 400px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 1.2em;
+            text-decoration: none;
+            color: #ff6347; /* Tomato color for link */
+            padding: 10px 20px;
+            background-color: rgba(255, 99, 71, 0.7);
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: rgba(255, 99, 71, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ anime.title }}</h1>
+        <p>{{ anime.description }}</p>
+        <img src="{{ anime.image_url }}" alt="{{ anime.title }}">
+        <br>
+        <a href="{{ anime.url }}" target="_blank">View on MyAnimeList</a>
+    </div>
+</body>
+</html>
+
+

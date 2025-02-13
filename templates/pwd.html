@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forgot Password</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url("{% static 'images/rai.jpg' %}"); /* Use your image here */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      
+    }
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("{% static 'images/rai.jpg' %}"); /* Your background image */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        filter: blur(8px); /* Apply the blur effect */
+        z-index: -1; /* Position the blurred background behind the content */
+      }
+
+    .forgot-password-container {
+      background-color: rgba(0, 0, 0, 0.5);  /* Dark overlay to make the form visible on the background */
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: white;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .back-to-login {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .back-to-login a {
+      text-decoration: none;
+      color: #4CAF50;
+    }
+
+    .back-to-login a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="forgot-password-container">
+    <h2>Forgot Password</h2>
+    <form action="/password_reset" method="POST">
+      <div class="form-group">
+        <label for="email">Enter your email address:</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <div class="back-to-login">
+      <p><a href="/login">Back to Login</a></p>
+    </div>
+  </div>
+
+</body>
+</html>

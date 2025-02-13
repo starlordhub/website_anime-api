@@ -1,0 +1,158 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime List</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+
+    
+</head>
+<body>
+  <b><a class="icon-link" href="{% url 'website' %}">
+    <i class="bi bi-house-door"></i>  <!-- Bootstrap Home icon -->
+    Home
+</a>
+</b>
+
+<style>
+  .icon-link {
+    display: flex;
+    align-items: center;
+    font-size: 24px;  /* Increase the font size of both icon and text */
+  }
+
+  .icon-link i {
+    font-size: 1.5em;  /* Make the icon larger relative to the text */
+    margin-right: 10px;  /* Space between the icon and the text */
+  }
+</style>
+
+
+  
+    <header class="index-header">Index</header>
+    <nav class="alphabet-nav">
+        <a href="{% url 'anime_list' %}">A</a>
+        <a href="{% url 'anime_list_2' %}">B</a>
+        <a href="{% url 'anime_list_3' %}">C</a>
+       
+    </nav>
+    <section class="anime-list">
+        <div class="anime-item"><a href="#">A Condition Called Love</a></div>
+        <div class="anime-item"><a href="#">A Galaxy Next Door</a> <span class="badge"></span></div>
+        <div class="anime-item"><a href="#">A Good Librarian Like a Good Shepherd</a> <span class="badge"></span></div>
+        <div class="anime-item"><a href="#">A Herbivorous Dragon of 5,000 Years Gets Unfairly Villainized</a></div>
+        <div class="anime-item"><a href="#">A Nobody's Way Up to an Exploration Hero</a></div>
+        <div class="anime-item"><a href="#">A Returner's Magic Should Be Special</a></div>
+        <div class="anime-item"><a href="#">A Sign of Affection</a></div>
+        <div class="anime-item"><a href="#">A Terrified Teacher at Ghoul School</a></div>
+        <div class="anime-item"><a href="#">A Will Eternal</a></div>  
+        <div class="anime-item"><a href="#"> A-Channel+smile BD</a></div>
+        <div class="anime-item"><a href="#">A.I.C.O. Incarnation</a></div>
+        <div class="anime-item"><a href="#"> A3! Season Autumn & Winter</a></div>
+        <div class="anime-item"><a href="#">A3! Season Spring & Summer</a></div>
+        <div class="anime-item"><a href="#">ABCiee Working Diary</a></div>
+        <div class="anime-item"><a href="#">Absolute Duo BD</a></div>
+        <div class="anime-item"><a href="#">ACCA: 13-Territory Inspection Dept. BD</a></div>
+        <div class="anime-item"><a href="#">Accel World BD</a></div>
+        <div class="anime-item"><a href="#">Accel World EX BD</a></div>
+        <div class="anime-item"><a href="#">Accel World: Acchel World. BD</a></div>
+        <div class="anime-item"><a href="#">Accel World: Infinite∞Burst BD</a></div>
+        <div class="anime-item"><a href="#">Acchi Kocchi BD</a></div>
+        <div class="anime-item"><a href="#">Acchi Kocchi BD</a></div>
+        <div class="anime-item"><a href="#">Acchi Kocchi: Place=Princess BD</a></div>
+        <div class="anime-item"><a href="#">Ace wo Nerae! BD</a></div>
+        <div class="anime-item"><a href="#">Ace wo Nerae! 2 DVD</a></div>
+        <div class="anime-item"><a href="#">Ace wo Nerae! Final Stage DVD</a></div>
+        <div class="anime-item"><a href="#">Acro Trip</a></div>
+        <div class="anime-item"><a href="#">Action Heroine Cheer Fruits BD</a></div>
+        <div class="anime-item"><a href="#">Active Raid: Kidou Kyoushuushitsu Dai Hachi Gakari</a></div>
+        <div class="anime-item"><a href="#">Active Raid: Kidou Kyoushuushitsu Dai Hachi Gakari 2nd</a></div>
+        <div class="anime-item"><a href="#">Actors: Songs Connection</a></div>
+        <div class="anime-item"><a href="#">Adachi to Shimamura BD</a></div>
+        <div class="anime-item"><a href="#">Africa no Salaryman (TV)</a></div>
+        <div class="anime-item"><a href="#">Afro Samurai BD</a></div>
+        <div class="anime-item"><a href="#">Afro Samurai Movie BD</a></div>
+        <div class="anime-item"><a href="#">Afro Samurai: Resurrection BD</a></div>
+        <div class="anime-item"><a href="#">After-School Hanako-kun</a></div>
+        <div class="anime-item"><a href="#">After-School Hanako-kun Part 2</a></div>
+        <div class="anime-item"><a href="#">Aggretsuko</a></div>
+        <div class="anime-item"><a href="#">Aggretsuko (ONA)</a></div>
+        <div class="anime-item"><a href="#">Aggretsuko (ONA) 2nd Season</a></div>
+        <div class="anime-item"><a href="#">Aggretsuko (ONA) 3rd Season</a></div>
+        <div class="anime-item"><a href="#">Aggretsuko (ONA) 4th Season</a></div>
+        <div class="anime-item"><a href="#">Aggretsuko (ONA) 5th Season</a></div>
+        <div class="anime-item"><a href="#">Aggretsuko: We Wish You a Metal Christmas</a></div>
+        <div class="anime-item"><a href="#">Aguu: Tensai Ningyou</a></div>
+        <div class="anime-item"><a href="#">Aharen-san wa Hakarenai BD</a></div>
+        <div class="anime-item"><a href="#">Ahiru no Sora</a></div>
+        <div class="anime-item"><a href="#">AHO-GIRL BD</a></div>
+        <div class="anime-item"><a href="#">Ai Shoujo Pollyanna Story DVD</a></div>
+        <div class="anime-item"><a href="#">Ai Shoujo Pollyanna Story Specials DVD</a></div>
+        <div class="anime-item"><a href="#">Ai Yori Aoshi BD</a></div>
+        <div class="anime-item"><a href="#">Ai Yori Aoshi: Enishi BD</a></div>
+        <div class="anime-item"><a href="#">Aikatsu Friends!</a></div>
+        <div class="anime-item"><a href="#">Aikatsu Friends!: Kagayaki no Jewel</a></div>
+        <div class="anime-item"><a href="#">Aikatsu on Parade!</a></div>
+        <div class="anime-item"><a href="#">Aikatsu on Parade! (ONA)</a></div>
+        <div class="anime-item"><a href="#">Aikatsu Planet!</a></div>
+        <div class="anime-item"><a href="#">Aikatsu Stars! BD</a></div>
+        <div class="anime-item"><a href="#">Aikatsu Stars! Movie BD</a></div>
+        <div class="anime-item"><a href="#">Aikatsu! BD</a></div>
+        <div class="anime-item"><a href="#">Aikatsu! Music Award: Minna de Shou wo MoracchaimaShow! BD</a></div>
+        <div class="anime-item"><a href="#">Aikatsu!: Nerawareta Mahou no Aikatsu! Card BD</a></div>
+        <div class="anime-item"><a href="#">Air BD</a></div>
+        <div class="anime-item"><a href="#">Air Gear DVD</a></div>
+        <div class="anime-item"><a href="#">Air Gear Special DVD</a></div>
+        <div class="anime-item"><a href="#">Air Gear: Kuro no Hane to Nemuri no Mori - Break on the Sky DVD</a></div>
+        <div class="anime-item"><a href="#">Air in Summer BD</a></div>
+        <div class="anime-item"><a href="#">Air Master</a></div>
+        <div class="anime-item"><a href="#">Air Movie</a></div>
+        <div class="anime-item"><a href="#">Aishen Qiaokeli-ing...</a></div>
+        <div class="anime-item"><a href="#">Aiura BD</a></div>
+        <div class="anime-item"><a href="#">Ajin BD</a></div>
+        <div class="anime-item"><a href="#">Ajin OVA DVD</a></div>
+        <div class="anime-item"><a href="#">Ajin Part 1: Shoudou BD</a></div>
+        <div class="anime-item"><a href="#">Ajin Part 2 BD</a></div>
+        <div class="anime-item"><a href="#">AkaKill! Gekijou BD</a></div>
+        <div class="anime-item"><a href="#">Akame ga Kill! BD</a></div>
+        <div class="anime-item"><a href="#">Akane Maniax BD</a></div>
+        <div class="anime-item"><a href="#">#name</a></div>
+        
+
+        <br>
+        <br>
+
+        <!-- Add more anime items here -->
+    </section>
+
+
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link" style="background-color: black; color: pink;">Previous</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="{% url 'anime_list' %}" style="background-color: black; color: pink;">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="{% url 'anime_list_2' %}" style="background-color: black; color: pink;">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="{% url 'anime_list_3' %}" style="background-color: black; color: pink;">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#" style="background-color: black; color: pink;">Next</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

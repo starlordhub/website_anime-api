@@ -1,0 +1,72 @@
+
+        body {
+            background-color: #000; /* Black background */
+            color: #f8f9fa; /* Light text */
+        }
+        .index-header {
+            font-size: 2rem;
+            margin: 20px 0;
+            text-align: center;
+            color: #ff007f; /* Pink text */
+        }
+        .alphabet-nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .alphabet-nav a {
+            margin: 0 10px;
+            color: #ff007f;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+        .alphabet-nav a:hover {
+            text-decoration: underline;
+        }
+        .anime-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three columns */
+            gap: 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+        .anime-item a {
+            text-decoration: none;
+            color: #ff007f;
+        }
+        .anime-item a:hover {
+            text-decoration: underline;
+        }
+        .badge {
+            margin-left: 5px;
+            background-color: #0056b3; /* Blue badge color */
+        }
+
+
+
+        nav.pagination .page-link {
+            color: #e81717;
+            background-color: #333;
+            border: 1px solid #444;
+        }
+        
+        nav.pagination .page-link:hover {
+            background-color: #555;
+            color: #fff;
+        }
+        
+        nav.pagination .page-item.disabled .page-link {
+            color: #999;
+            background-color: #333;
+            border-color: #444;
+        }
+        
+        nav.pagination .page-item.active .page-link {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+        }
+        
+
+   

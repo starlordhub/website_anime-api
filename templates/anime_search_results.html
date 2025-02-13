@@ -1,0 +1,82 @@
+{% load static %}
+<!-- anime_search_results.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        body {
+            background-color: black; /* Black background */
+            color: white; /* White text */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.1); /* Slight white background for each anime */
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        a {
+            color: #ff6347; /* Tomato color for link */
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Results for "{{ query }}"</h1>
+    {% if anime_results %}
+        <ul>
+            {% for anime in anime_results %}
+                <li>
+                    <h2>{{ anime.title }}</h2>
+                    <p>{{ anime.synopsis }}</p>
+                    <img src="{{ anime.images.jpg.image_url }}" alt="{{ anime.title }}">
+                    <br>
+                    <a href="{{ anime.url }}" target="_blank">View Link</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results found for "{{ query }}".</p>
+    {% endif %}
+</body>
+</html>

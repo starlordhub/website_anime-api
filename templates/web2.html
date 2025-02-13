@@ -1,0 +1,321 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'bootstrap-grid.css'%}">
+  <link rel="stylesheet" href="{% static 'bootstrap-grid.min.css'%}">
+  <link rel="stylesheet" href="{% static 'bootstrap-reboot.css'%}">
+  <link rel="stylesheet" href="{% static 'bootstrap.css'%}">
+  <link rel="stylesheet" href="{% static 'bootstrap.min.css'%}">
+  
+
+  <style>
+    .scrollable-container {
+      max-height: 500px;
+      overflow-y: auto;
+    }
+  </style>
+
+  <style>
+    /* Background Image */
+    body {
+      background-color: black;
+      background-size: cover;
+      color: #fff;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .navbar a {
+      color: #fff;
+    }
+
+    /* Scrollable Container */
+    .scrollable-container {
+      max-height: 500px;
+      overflow-y: auto;
+    }
+
+    /* Card Styling */
+    .card {
+      background-color: rgba(0, 0, 0, 0.7);
+      border: none;
+      color: #fff;
+    }
+
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* Pagination */
+    .pagination .page-link {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .pagination .page-link:hover {
+      background-color: #28a745;
+      color: #fff;
+    }
+
+    /* Buttons */
+    .btn-success {
+      background-color: #28a745;
+    }
+
+.form-control {
+        background-color: black; /* Black background */
+        color: white; /* White text color */
+        border: 1px solid white; /* Optional: to make the border visible in white */
+}
+
+    .form-control::placeholder {
+          color: lightgray; /* Light white placeholder text */
+  }
+   .custom-dropdown {
+  background-color: black; /* Entire dropdown background */
+}
+
+.custom-dropdown .dropdown-item {
+  color: white; /* Default text color */
+  background-color: transparent; /* Transparent by default */
+}
+
+.custom-dropdown .dropdown-item:hover,
+.custom-dropdown .dropdown-item:focus {
+  background-color: white; /* Transparent background while selecting */
+  color: black; /* Text remains white */
+}
+
+.custom-dropdown .dropdown-item:active {
+  background-color: white; /* Background becomes white after selection */
+  color: black; /* Text changes to black for visibility */
+}
+
+.custom-dropdown .dropdown-divider {
+  border-color: #666; /* Subtle divider color for contrast */
+}
+  </style>
+
+</head>
+
+<body>
+ 
+
+<!--  
+  <nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light" href="#">Animehub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-light" aria-current="page" href="{% url 'website' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="{% url 'anime_list' %}">animelist</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Releases
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item text-dark" href="{% url 'ongoing' %}">ongoing</a></li>
+              <li><a class="dropdown-item text-dark" href="{% url 'upcoming' %}">upcoming</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-dark" href="{% url 'completed' %}">completed</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled text-light" aria-disabled="true">Queue</a>
+          </li>
+        </ul>
+
+        <a href="{% url 'login' %}"> 
+          <button type="button" class="btn btn-success">Success</button></a>
+          &nbsp;&nbsp;
+
+          
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search for animes" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  -->
+  <nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light" href="#">
+        <span style="color: red;">A</span>nime<span style="color: red;">H</span>ub
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="background-color: gray; border: none;"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="{% url 'website' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="{% url 'anime_list' %}">Anime List</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Releases
+            </a>
+           <ul class="dropdown-menu custom-dropdown">
+              <li><a class="dropdown-item" href="{% url 'ongoing' %}">ongoing</a></li>
+              <li><a class="dropdown-item" href="{% url 'upcoming' %}">upcoming</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{% url 'completed' %}">completed</a></li>
+           </ul>
+
+
+
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled text-light" aria-disabled="true">Queue</a>
+          </li>
+        </ul>
+        
+         <form class="d-flex" role="search" method="GET" action="{% url 'anime_search' %}">
+          <input class="form-control me-2" type="search" name="query" placeholder="Search for animes" aria-label="Search" value="{{ query }}">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        &nbsp;&nbsp;
+        <a href="{% url 'register' %}">
+          <button type="button" class="btn btn-success">Register</button>
+        </a>
+        &nbsp;&nbsp;
+        <a href="{% url 'login' %}">
+          <button type="button" class="btn btn-success">Login </button>
+        </a>
+        &nbsp;&nbsp;
+      </div>
+    </div>
+  </nav>
+
+  
+
+
+
+
+
+
+
+  <!-- code for cards displaying 3 per area or row -->
+
+
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-4">Latest Releases</h1>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Card 1 -->
+        
+        <!-- Card 2 -->
+        <div class="col">
+          <div class="card">
+            <img src='{% static "images/guts.jpg" %}' class="card-img-top" alt="Card 2">
+            <div class="card-body">
+              <h5 class="card-title">Berserk</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col">
+          <div class="card">
+            <img src='{% static "images/tanjiro.jpg" %}' class="card-img-top" alt="Card 3">
+            <div class="card-body">
+              <h5 class="card-title">Demon Slayer</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col">
+          <div class="card">
+            <img src='{% static "images/haikyuu.jpg" %}' class="card-img-top" alt="Card 2">
+            <div class="card-body">
+              <h5 class="card-title">Haikyuu</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="col">
+          <div class="card">
+            <img src='{% static "images/eren.jpg" %}' class="card-img-top" alt="Card 2">
+            <div class="card-body">
+              <h5 class="card-title">Attack on Titan</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="col">
+          <div class="card">
+            <img src='{% static "images/zenitsu.jpg" %}' class="card-img-top" alt="Card 2">
+            <div class="card-body">
+              <h5 class="card-title">Zenitsu</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Card 7 -->
+        <div class="col">
+          <div class="card">
+            <img src='{% static "images/zoro.jpg" %}' class="card-img-top" alt="Card 2">
+            <div class="card-body">
+              <h5 class="card-title">zoro</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <br>
+    <br>
+
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="{% url 'website' %}">1</a></li>
+        <li class="page-item"><a class="page-link" href="{% url 'web_2' %}">2</a></li>
+        <li class="page-item"><a class="page-link" href="{% url 'web_3' %}">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <script src="{% static 'bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'bootstrap.js' %}"></script>
+    <script src="{% static 'bootstrap.min.js' %}"></script>
+  </body>
+
+</html>
